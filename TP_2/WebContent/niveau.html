@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>niveau de compétance</title>
+
+<style>
+    form{
+    	border:solid; 
+    }
+    
+    .field{
+    	width:600px;  
+    	color:blue; 
+    	margin:20px; 
+    }
+    
+    button{
+    	margin:10px; 
+    }
+</style>
+
+</head>
+<body>
+	
+	<form action="niveau.jsp">
+	
+		<div class="field">
+			Votre nom <input type="text" name="nom" placeholder="Votre nom">
+		</div>
+		
+		<div class="field">
+			Quelles sont vos connaissances de HTML ? 
+			<input type="radio" name="html" value="1">faibles 
+			<input type="radio" name="html" value="2">moyennes
+			<input type="radio" name="html" value="3">bonnes
+		</div>
+		
+		<div class="field">
+			Indiquez votre expertise en programmation  :
+			<input type="radio" name="prog" value="1">faibles
+			<input type="radio" name="prog" value="2">moyenne
+			<input type="radio" name="prog" value="3">bonne
+		</div>
+		
+		<button type="submit">Voir le résultat!</button>
+	</form>
+</body>
+</html>

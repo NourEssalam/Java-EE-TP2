@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>calculatrice</title>
+
+<style>
+  
+  body{
+      font-family:monospace; 
+  }
+  .wrapper{
+      
+      border:#000 solid 3px;  
+      width:40%; 
+      height:auto; 
+      margin:auto; 
+      padding:0px; 
+      position:absolute;   
+      top:20%; 
+      left:30%;
+      overflow:hidden; 
+  }
+  
+     .data{ 
+          width:100%; 
+          padding:0px;  
+           
+          
+     }
+     
+     .data input{
+     		width:49.3%;  
+     		display:inline-block; 
+     		margin:-2px; 
+     		height:150px; 
+     		font-size:1.5em;
+     		text-align:center; 
+     		color:green; 
+     		background:#fff; 
+     		border:none;    
+     	
+     		
+     }
+     
+      input[type="number"]:focus{outline:none;}  
+     
+      .operation{
+      		width:100%; 
+      		margin-bottom:5px;  
+      		
+      }
+     
+     label{ 
+     		  display:inline-block; 
+     		  margin-left:20px;  
+     		  width:45%;    
+      
+     } 
+     
+     input[type="radio"] {
+		  width: 30px;
+		  height: 30px;
+		  border-radius: 0px;
+		  border: 2px solid #1FBED6;
+		  background-color: white;
+		  -webkit-appearance: none; /*to disable the default appearance of radio button*/
+		  -moz-appearance: none; 
+		  
+}
+
+
+	input[type="radio"]:focus { /*no need, if you don't disable default appearance*/
+	  outline: none; /*to remove the square border on focus*/
+	}
+	
+	input[type="radio"]:checked { /*no need, if you don't disable default appearance*/
+	  background-color: #000;
+	}
+	
+	input[type="radio"]:checked ~ span:first-of-type {
+	  color: white;
+	}
+	
+	label span:first-of-type {
+	  position: relative;
+	  left: -27px; 
+	  font-size: 15px;
+	  color: #1FBED6; 
+	}
+	
+	label span {
+	  position: relative;
+	  top: -12px;
+	}
+
+
+     button{
+     	width:100%;  
+     		display:block;  
+     		margin:auto; 
+     		height:50px; 
+     		font-size:1.5em;
+     		text-align:center; 
+     		color:green; 
+     		background:#ddd; 
+     		border:none;
+     }
+     
+     button:hover{
+     	background:red; 
+     	color:white; 
+     }
+</style>
+
+</head>
+<body>
+
+<form action="calc" method="post" > 
+
+
+	<div class="wrapper">
+		<div class="data">
+		  <input type="number" name="numOne" value="0" placeholder="Opérande 1 ">
+		  <input type="number" name="numTwo" value="0" placeholder="Opérande 2 ">
+		</div>
+		<div class="operation">
+		 
+		  
+			<label>
+			  <input type="radio" name="options" value="+" />
+			  <span> + </span><span>Addition</span>
+			</label>
+			
+			<label>
+			  <input type="radio" name="options" value="-" />
+			  <span>-</span><span>Soustraction</span>
+			</label>
+			
+			<label>
+			  <input type="radio" name="options" value="x" />
+			  <span>x</span><span>Multiplication</span>
+			</label>
+			
+			<label>
+			  <input type="radio" name="options" value="/" />
+			  <span>/</span><span>Division</span>
+			</label>
+		</div>
+		
+		<button type="submit">Envoyer</button>
+		<button type="reset">Rétablir</button>
+		
+	</div>
+
+
+</form>
+
+</body>
+</html>
